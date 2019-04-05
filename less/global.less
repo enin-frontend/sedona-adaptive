@@ -1,0 +1,92 @@
+@tablet-width:768px;
+@desktop-width: 1200px;
+@mobile-width-only:767px;
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pt-sans-v10-cyrillic_latin-regular.woff2') format('woff2'),  
+       url('../fonts/pt-sans-v10-cyrillic_latin-regular.woff') format('woff');  
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/pt-sans-v10-cyrillic_latin-700.woff2') format('woff2'),  
+       url('../fonts/pt-sans-v10-cyrillic_latin-700.woff') format('woff');  
+}
+
+ul {
+  list-style: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PT Sans';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+}
+
+a{
+ text-decoration: none;
+ color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button{
+  cursor: pointer;
+  border: none;
+  background-color: #81b3d2;
+  text-transform: uppercase;
+  &:hover{
+    background-color: #669ec0;
+  }
+  &:active{
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3)
+  }
+}
+
+fieldset{
+  border: none;
+}
+
+@media(min-width:@desktop-width){
+  .container{
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
+  }
+
+  body{
+    background-color: #f2f2f2;
+  }
+}
+

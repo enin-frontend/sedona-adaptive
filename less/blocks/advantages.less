@@ -1,0 +1,297 @@
+.advantages {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.advantages__title{
+  padding: 0px 23px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+
+.advantages__description{
+  padding: 0 35px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.advantages__info-block{
+  padding:50px 27px;
+  padding-bottom: 38px;
+
+  color: #ffffff;
+  background-color: #81b3d2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__info-block--gray{
+  position: relative;
+  padding: 25px 27px;
+  background-color: #eeeeee;
+  color: #333333;
+
+  &::after{
+    position: absolute;
+    content: '';
+    left: 20px;
+    bottom: 0;
+
+    width: 280px;
+    height: 1px;
+
+    background-color: #d6d6d6;
+  }
+
+  &:last-child::after{
+    display: none;
+  }
+}
+
+.advantages__title-block{
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.advantages__title-block--black{
+  color:#000000;
+}
+
+.advantages__number-reason{
+  display: block;
+  padding-bottom: 10px;
+}
+
+.advantages__block-image{
+  height: 260px;
+
+  background-image: url(../img/photo-city-mobile.jpg);
+  background-repeat: no-repeat;
+}
+
+.advantages__block-image--bridge{
+  background-image: url(../img/photo-bridge-mob.jpg);
+}
+
+.advantages__list{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 37px;
+}
+
+.advantages__item {
+  position: relative;
+
+  text-transform: uppercase;
+
+  &:nth-child(n)::after{
+    position: absolute;
+    content: '';
+    top: 26px;
+    left: 22px;
+    width: 39px;  
+    height: 37px;
+    background-image: url(../img/icon-house.svg);
+    background-repeat: no-repeat;
+    background-size: 39px 37px;
+  }
+  &:nth-child(2){
+    order: 2;
+    &::after{
+      background-image: url(../img/icon-burger.svg);
+      background-size: 32px 38px;
+    }
+  }
+
+  &:nth-child(3){
+    order: 1;
+    &::after{
+      background-image: url(../img/gift-icon.svg);
+      background-size: 40px 35px;
+    }
+  }
+}
+
+.advantages__text{
+  display: block;
+  padding-top: 35px;
+  padding-bottom: 13px;
+  color: #000000;
+}
+
+.advantages__text,
+.advantages__desc{
+  padding-left: 70px;
+}
+
+@media(min-width:@tablet-width){
+  .advantages{
+    width: 768px;
+  }
+
+  .advantages__title,
+  .advantages__description{
+    padding-left:140px;
+    padding-right:140px;
+  }
+
+  .advantages__title{
+    font-size: 21px;
+  }
+
+  .advantages__description{
+    padding-bottom: 50px;
+  }
+  
+  .advantages__reason{
+    display: flex;
+  }
+
+  .advantages__info-block{
+    width: 256px;
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+
+  .advantages__block-image{
+    height: 256px;
+    background-image: url(../img/photo-city-tablet.jpg);
+    flex-grow: 1;
+  }
+
+  .advantages__title-block{
+    padding-bottom: 14px;
+    font-size: 21px;
+  }
+
+  .advantages__number-reason{
+    padding-bottom: 20px;
+  }
+
+  .advantages__list{
+    flex-direction: row;
+  }
+
+  .advantages__item{
+    width: 256px;
+    text-align: center;
+    &:nth-child(n)::after{
+      left: 90px;
+      top: 60px;
+      width: 75px;
+      height: 82px;
+    }
+
+    &:first-child::after{
+      background-size: 75px 72px;
+    }
+
+    &:nth-child(2){
+      order: 0;
+      &::after{
+        background-size: 77px 68px;
+      }
+    }
+
+    &:nth-child(3)::after{
+      background-size: 64px 75px;
+    }
+  }
+
+  .advantages__text, .advantages__desc{
+    padding: 0 46px;
+  }
+
+  .advantages__text{
+    padding-top: 150px;
+    padding-bottom: 20px;
+    font-size: 21px;
+  }
+
+  .advantages__block-image--bridge{
+    background-image: url(../img/photo-bridge-tab.jpg);
+  }
+
+  .advantages__reason--second .advantages__info-block{
+    order: 1;
+  }
+
+  .advantages__block-list{
+    display: flex;
+  }
+
+  .advantages__block-list .advantages__info-block{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .advantages__info-block--gray::after{
+    display: none;
+  }
+}
+
+@media(min-width:@desktop-width){
+  .advantages{
+    width: 1200px;
+    background-color: #ffffff;
+  }
+
+  .advantages__title, .advantages__description{
+    padding-left: 352px;
+    padding-right: 352px;
+  }
+
+  .advantages__title-block{
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  .advantages__info-block{
+    width: 400px;
+    padding-left: 68px;
+    padding-right: 68px;
+  }
+
+  .advantages__block-image{
+    background-image: url(../img/photo-city-desk.jpg);
+  }
+
+  .advantages__list{
+    padding-bottom: 80px;
+  }
+
+  .advantages__item{
+    width: 400px;
+    &:nth-child(n)::after{
+      left: 161px;
+    }
+
+    &:last-child::after{
+      left: 167px;
+    }
+  }
+
+  .advantages__text{
+    padding-top: 163px;
+  }
+
+  .advantages__block-image--bridge{
+    background-image: url(../img/photo-bridge-desk.jpg);
+  }
+
+  .advantages__reason--second .advantages__title-block{
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .advantages__info-block--gray{
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  
+}
