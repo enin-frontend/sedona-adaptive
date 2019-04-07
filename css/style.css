@@ -791,6 +791,9 @@ fieldset {
 .photo__item:last-child {
   margin: 0;
 }
+.photo__img {
+  width: 280px;
+}
 .photo__text {
   display: block;
   padding-top: 14px;
@@ -918,6 +921,9 @@ fieldset {
   .photo__item:nth-child(n):first-child picture {
     height: 400px;
   }
+  .photo__img {
+    width: 648px;
+  }
   .photo__desc-block {
     position: relative;
     padding: 20px;
@@ -1010,6 +1016,9 @@ fieldset {
   .photo__item:nth-child(n) {
     position: relative;
     width: 400px;
+  }
+  .photo__img {
+    width: 100%;
   }
   .photo__desc-block {
     position: absolute;
@@ -1569,7 +1578,7 @@ fieldset {
     padding-right: 0;
   }
   .form__block--fourth .form__list .form__item {
-    width: 200px;
+    width: 205px;
   }
   .form__block--fifth .form__legend::before,
   .form__block--fifth .form__legend::after {
