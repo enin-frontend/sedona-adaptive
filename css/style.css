@@ -860,6 +860,12 @@ fieldset {
 .photo__button svg {
   fill: #5c6870;
 }
+.photo__button:hover svg {
+  fill: #333333;
+}
+.photo__button:active svg {
+  opacity: 0.3;
+}
 .photo__video__management {
   height: 66px;
   background-color: #f2f2f2;
@@ -970,6 +976,13 @@ fieldset {
   }
   .photo__button svg {
     fill: #ffffff;
+  }
+  .photo__button:hover svg {
+    fill: #ffffff;
+    opacity: 0.6;
+  }
+  .photo__button:active svg {
+    opacity: 0.3;
   }
   .photo__move-control {
     left: 113px;
@@ -1112,12 +1125,12 @@ fieldset {
 }
 .form-input-text {
   width: 100%;
-  padding: 21px 0;
+  padding: 17px 0;
   padding-left: 22px;
   padding-right: 58px;
   font-weight: 700;
   background-color: #f2f2f2;
-  border: none;
+  border: 4px solid transparent;
 }
 .form-input-text::-webkit-input-placeholder {
   color: #000000;
@@ -1142,6 +1155,14 @@ fieldset {
   font-weight: 700;
   font-size: 18px;
   font-family: 'PT Sans';
+}
+.form-input-text:hover {
+  background-color: #e5e5e5;
+}
+.form-input-text:active,
+.form-input-text:focus {
+  background-color: #ffffff;
+  border-color: #e5e5e5;
 }
 .form__number {
   margin-bottom: 17px;
@@ -1205,6 +1226,12 @@ fieldset {
   background-color: #f2f2f2;
   border-radius: 50%;
 }
+.form-input-radio + label:hover::before {
+  background-color: #e5e5e5;
+}
+.form-input-radio + label:active::before {
+  background-color: #d5d5d5;
+}
 .form-input-radio:checked + label::after {
   position: absolute;
   content: '';
@@ -1215,6 +1242,9 @@ fieldset {
   background-color: #333333;
   border-radius: 50%;
 }
+.form-input-radio:checked + label:active::after {
+  background-color: rgba(51, 51, 51, 0.3);
+}
 .form-input-checkbox + label::before {
   position: absolute;
   content: '';
@@ -1223,6 +1253,13 @@ fieldset {
   width: 56px;
   height: 56px;
   background-color: #f2f2f2;
+  border-radius: 5px;
+}
+.form-input-checkbox + label:hover::before {
+  background-color: #e5e5e5;
+}
+.form-input-checkbox + label:active::before {
+  background-color: #d5d5d5;
 }
 .form-input-checkbox:checked + label::after {
   position: absolute;
@@ -1234,6 +1271,9 @@ fieldset {
   background-image: url(../img/checked.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+.form-input-checkbox:checked + label:active::after {
+  opacity: 0.3;
 }
 .form__block--fourth {
   -webkit-box-ordinal-group: 4;
